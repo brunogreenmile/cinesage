@@ -1,21 +1,39 @@
 ## CineSage: Your Personal Movie Recommender
 CineSage is a movie recommendation system designed to provide personalized movie suggestions using data from the TMDB API. This project showcases the integration of multiple technologies to create a seamless and efficient web application.
 
-Technologies Used:
+## Technologies Used:
 
-Python: The core programming language used for building the application logic and handling data processing. Flask: A lightweight WSGI web application framework in Python that serves as the backbone of the web server, handling requests and responses. TMDB API: The Movie Database API is utilized to fetch real-time data on popular movies, ensuring the recommendations are always up-to-date. pandas: A powerful data manipulation and analysis library used to process and analyze the movie data. scikit-learn: A machine learning library used for implementing the recommendation algorithm, specifically for vectorizing text data and computing similarity scores. requests: A simple HTTP library for making API requests to the TMDB API and handling responses. pytest: A testing framework used to ensure the reliability and correctness of the application through automated tests. Project Highlights:
+**Python**: The core programming language used for building the application logic and handling data processing. 
+**Flask**: A lightweight WSGI web application framework in Python that serves as the backbone of the web server, handling requests and responses. 
+**TMDB API**: The Movie Database API is utilized to fetch real-time data on popular movies, ensuring the recommendations are always up-to-date. 
+**pandas**: A powerful data manipulation and analysis library used to process and analyze the movie data. 
+**scikit-learn**: A machine learning library used for implementing the recommendation algorithm, specifically for vectorizing text data and computing similarity scores. 
+**requests**: A simple HTTP library for making API requests to the TMDB API and handling responses. 
+**pytest**: A testing framework used to ensure the reliability and correctness of the application through automated tests. 
+**Project Highlights**:
 
 API Integration: Seamlessly integrates with the TMDB API to fetch and display a list of recommended movies. Data Processing: Utilizes pandas for efficient data handling and processing, enabling quick transformations and analysis. Machine Learning: Implements a content-based recommendation system using scikit-learn to compute movie similarities based on descriptions. Web Development: Leverages Flask to create a responsive and interactive web interface that allows users to get movie recommendations by simply entering a title. Testing: Ensures code quality and reliability with pytest, providing a robust suite of tests for continuous integration. This project not only demonstrates proficiency in Python and web development but also showcases the ability to integrate external APIs and implement machine learning algorithms to deliver a practical and user-friendly application.
 
-Technologies Used:
+**AI in Movie Recommendations**
+Movie recommendations use machine learning techniques to analyze and suggest movies based on user preferences. In the code, this is done through the following steps:
 
-Python: The core programming language used for building the application logic and handling data processing. Flask: A lightweight WSGI web application framework in Python that serves as the backbone of the web server, handling requests and responses. TMDB API: The Movie Database API is utilized to fetch real-time data on popular movies, ensuring the recommendations are always up-to-date. pandas: A powerful data manipulation and analysis library used to process and analyze the movie data. scikit-learn: A machine learning library used for implementing the recommendation algorithm, specifically for vectorizing text data and computing similarity scores. requests: A simple HTTP library for making API requests to the TMDB API and handling responses. pytest: A testing framework used to ensure the reliability and correctness of the application through automated tests. Project Highlights:
+1. Data Representation (Feature Extraction):
+The CountVectorizer from the scikit-learn library is used to transform the texts (movie synopses) into a matrix of word counts.
+Each row of the matrix represents a movie, and each column represents a word (or term) present in the synopses. The cell contains the count of times the word appears in the movie synopsis.
 
-API Integration: Seamlessly integrates with the TMDB API to fetch and display a list of recommended movies. Data Processing: Utilizes pandas for efficient data handling and processing, enabling quick transformations and analysis. Machine Learning: Implements a content-based recommendation system using scikit-learn to compute movie similarities based on descriptions. Web Development: Leverages Flask to create a responsive and interactive web interface that allows users to get movie recommendations by simply entering a title. Testing: Ensures code quality and reliability with pytest, providing a robust suite of tests for continuous integration. This project not only demonstrates proficiency in Python and web development but also showcases the ability to integrate external APIs and implement machine learning algorithms to deliver a practical and user-friendly application.
+2. Similarity Calculation (Cosine Similarity):
+The cosine_similarity calculates the similarity between the word count vectors of the movies.
+Cosine similarity is a metric that measures how similar two documents (or, in this case, movie synopses) are, regardless of their size.
+The result is a similarity matrix, where each entry [i][j] indicates how similar the movies i and j are.
+Similarity-Based Recommendation:
+
+3. The system uses the user's preferences (movies they liked) to find similar movies.
+For each movie the user liked, the system sums the corresponding similarity vectors to obtain an aggregate score.
+The movies with the highest scores (which are not in the list of movies the user disliked) are recommended to the user.
 
 ## Installation - you must have at least Python 3.12.14
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```sh
    git clone https://github.com/brunosantos/cinesage.git
    cd moviemate
