@@ -1,4 +1,4 @@
-#CineSage: Your Personal Movie Recommender
+## CineSage: Your Personal Movie Recommender
 CineSage is a movie recommendation system designed to provide personalized movie suggestions using data from the TMDB API. This project showcases the integration of multiple technologies to create a seamless and efficient web application.
 
 Technologies Used:
