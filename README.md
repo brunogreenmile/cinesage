@@ -1,18 +1,35 @@
 ## CineSage: Your Personal Movie Recommender
 CineSage is a movie recommendation system designed to provide personalized movie suggestions using data from the TMDB API. This project showcases the integration of multiple technologies to create a seamless and efficient web application.
 
-## Technologies Used:
+**Technologies Used:**
 
-**Python**: The core programming language used for building the application logic and handling data processing. 
-**Flask**: A lightweight WSGI web application framework in Python that serves as the backbone of the web server, handling requests and responses. 
-**TMDB API**: The Movie Database API is utilized to fetch real-time data on popular movies, ensuring the recommendations are always up-to-date. 
-**pandas**: A powerful data manipulation and analysis library used to process and analyze the movie data. 
-**scikit-learn**: A machine learning library used for implementing the recommendation algorithm, specifically for vectorizing text data and computing similarity scores. 
-**requests**: A simple HTTP library for making API requests to the TMDB API and handling responses. 
-**pytest**: A testing framework used to ensure the reliability and correctness of the application through automated tests. 
+1. Python: The core programming language used for building the application logic and handling data processing.
+   
+2. Flask: A lightweight WSGI web application framework in Python that serves as the backbone of the web server, handling requests and responses. 
+
+3. TMDB API: The Movie Database API is utilized to fetch real-time data on popular movies, ensuring the recommendations are always up-to-date. 
+
+4. pandas: A powerful data manipulation and analysis library used to process and analyze the movie data.
+
+5. scikit-learn: A machine learning library used for implementing the recommendation algorithm, specifically for vectorizing text data and computing similarity scores.
+
+6. requests: A simple HTTP library for making API requests to the TMDB API and handling responses. 
+
+7. pytest: A testing framework used to ensure the reliability and correctness of the application through automated tests. 
+
 **Project Highlights**:
 
-API Integration: Seamlessly integrates with the TMDB API to fetch and display a list of recommended movies. Data Processing: Utilizes pandas for efficient data handling and processing, enabling quick transformations and analysis. Machine Learning: Implements a content-based recommendation system using scikit-learn to compute movie similarities based on descriptions. Web Development: Leverages Flask to create a responsive and interactive web interface that allows users to get movie recommendations by simply entering a title. Testing: Ensures code quality and reliability with pytest, providing a robust suite of tests for continuous integration. This project not only demonstrates proficiency in Python and web development but also showcases the ability to integrate external APIs and implement machine learning algorithms to deliver a practical and user-friendly application.
+1. API Integration: Seamlessly integrates with the TMDB API to fetch and display a list of recommended movies.
+
+2. Data Processing: Utilizes pandas for efficient data handling and processing, enabling quick transformations and analysis.
+
+3. Machine Learning: Implements a content-based recommendation system using scikit-learn to compute movie similarities based on descriptions.
+
+4. Web Development: Leverages Flask to create a responsive and interactive web interface that allows users to get movie recommendations by simply entering a title.
+
+5. Testing: Ensures code quality and reliability with pytest, providing a robust suite of tests for continuous integration.
+
+6. This project not only demonstrates proficiency in Python and web development but also showcases the ability to integrate external APIs and implement machine learning algorithms to deliver a practical and user-friendly application.
 
 **AI in Movie Recommendations**
 Movie recommendations use machine learning techniques to analyze and suggest movies based on user preferences. In the code, this is done through the following steps:
